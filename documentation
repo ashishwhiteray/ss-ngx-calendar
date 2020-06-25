@@ -1,0 +1,31 @@
+STEP 1
+------------Install latest version for all angular---------------
+
+npm i ss-ngx-calendar
+
+
+
+STEP-2
+------------Import in module.ts-----------------
+
+import { CommonModule } from "@angular/common";
+import { NgxCalendarModule } from "ss-ngx-calendar";
+
+
+STEP-3
+-------------In Component.ts----------------
+-----------Keep This code within the class---------------------
+
+calendarOptions = {};
+calendarValue = null;
+onChooseDate(date: any) {
+    this.calendarValue = date;
+}
+
+
+STEP-4
+-------------------In HTML----------------
+<ngx-calendar [options]="calendarOptions" (onChooseDate)="onChooseDate($event)"></ngx-calendar>
+
+
+For more information follow this link-->>>     https://www.npmjs.com/package/ss-ngx-calendar
